@@ -40,7 +40,7 @@ public class CountdownTimer : MonoBehaviour
         }
         if(secondsLeft == 0)
         {
-            textDisplay.GetComponent<Text>().text = "Game Over!" + secondsLeft;
+            textDisplay.GetComponent<Text>().text = "Game Over!";
         }
         takingAway = false;
     }
