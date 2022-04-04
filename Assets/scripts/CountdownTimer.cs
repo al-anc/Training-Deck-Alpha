@@ -40,7 +40,8 @@ public class CountdownTimer : MonoBehaviour
             textDisplay.GetComponent<Text>().text = "00:" + secondsLeft;
         }
         if(secondsLeft == 0)
-        {
+        {   
+            Cursor.lockState = CursorLockMode.None;
             SceneManager.LoadScene(2);
         }
         takingAway = false;

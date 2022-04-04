@@ -7,6 +7,7 @@ public class KZone : MonoBehaviour
 {
       void OnTriggerEnter(Collider other)
         {
+          Cursor.lockState = CursorLockMode.None;
             SceneManager.LoadScene(2);
             
         }

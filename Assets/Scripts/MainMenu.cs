@@ -9,6 +9,11 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject howtoPlayMenu;
 
+    void Awake()
+    {
+        Cursor.lockState = CursorLockMode.None;
+    }
+
 
     public void ChangeScreen(int screenValue)
     {
