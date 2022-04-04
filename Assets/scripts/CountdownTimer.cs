@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CountdownTimer : MonoBehaviour
 {
@@ -40,7 +41,7 @@ public class CountdownTimer : MonoBehaviour
         }
         if(secondsLeft == 0)
         {
-            textDisplay.GetComponent<Text>().text = "Game Over!";
+            SceneManager.LoadScene(2);
         }
         takingAway = false;
     }
