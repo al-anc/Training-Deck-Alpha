@@ -22,9 +22,9 @@ public float dashspeed = 100.0f;
 
     // Update is called once per frame
     void Update()
-    {  
- 
-        
+    {
+
+        Vector3 movement = new Vector3(Input.GetAxis("MoveHorizontal"), Input.GetAxis("MoveVertical"), 0.0f);
 
       //  player.position += front * speed; 
       //this rotates the turntable left and right
