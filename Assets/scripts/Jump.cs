@@ -24,5 +24,12 @@ void Update()
         Debug.Log("hi");
         coolDownTimer = coolDown;
     }
+
+    if (Input.GetButton("MoveJump"))
+        {
+            rb.AddForce(Vector3.up * jumpAmount, ForceMode.Impulse);
+            Debug.Log("hi");
+            coolDownTimer = coolDown;
+        }
 }
 }
