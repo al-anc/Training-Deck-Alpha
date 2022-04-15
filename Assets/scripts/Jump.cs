@@ -25,7 +25,7 @@ void Update()
         coolDownTimer = coolDown;
     }
 
-    if (Input.GetButton("MoveJump"))
+    if (Input.GetButton("MoveJump") && coolDownTimer == 0)
         {
             rb.AddForce(Vector3.up * jumpAmount, ForceMode.Impulse);
             Debug.Log("hi");
