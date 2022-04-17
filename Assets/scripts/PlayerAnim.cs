@@ -4,65 +4,28 @@ using UnityEngine;
 
 public class PlayerAnim : MonoBehaviour
 {
-    Animator animator;
+    Animator anim;
+    private bool isJumping;
 
     // Start is called before the first frame update
     void Start()
     {
-        animator = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.W))
-        {
-            animator.SetInteger("State", 1);
+        float move = Input.GetAxis ("Vertical");
+        anim.SetFloat("Speed", move);
+
+        if(Input.GetKeyDown(KeyCode.Space)){
+            anim.SetBool("IsJumping", true);
         }
 
-        if(Input.GetKeyUp(KeyCode.W))
-        {
-            animator.SetInteger("State", 0);
+        if(Input.GetKeyUp(KeyCode.Space)){
+            anim.SetBool("IsJumping", false);
         }
 
-        if(Input.GetKeyDown(KeyCode.A))
-        {
-            animator.SetInteger("State", 1);
-        }
-
-        if (Input.GetKeyUp(KeyCode.A))
-        {
-            animator.SetInteger("State", 0);
-        }
-
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            animator.SetInteger("State", 1);
-        }
-
-        if (Input.GetKeyUp(KeyCode.S))
-        {
-            animator.SetInteger("State", 0);
-        }
-
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            animator.SetInteger("State", 1);
-        }
-
-        if (Input.GetKeyUp(KeyCode.D))
-        {
-            animator.SetInteger("State", 0);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            animator.SetInteger("State", 2);
-        }
-
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            animator.SetInteger("State", 0);
-        }
     }
 }

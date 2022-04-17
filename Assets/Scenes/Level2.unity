@@ -3989,7 +3989,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5810811909460754169, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}
       propertyPath: m_Name
-      value: Turntable
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5810811909460754174, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}
       propertyPath: m_RootOrder
@@ -4035,6 +4035,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6657814986642399636, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7059095650160742043, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 7993b0217c739a241b150fe3ed594c80, type: 2}
     m_RemovedComponents:
     - {fileID: 1863507488141712880, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}
