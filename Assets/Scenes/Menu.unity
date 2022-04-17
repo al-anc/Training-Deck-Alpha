@@ -496,6 +496,7 @@ GameObject:
   - component: {fileID: 823025215}
   - component: {fileID: 823025214}
   - component: {fileID: 823025218}
+  - component: {fileID: 823025219}
   m_Layer: 5
   m_Name: MainMenuCanvas
   m_TagString: Untagged
@@ -603,6 +604,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenu: {fileID: 823025213}
   howtoPlayMenu: {fileID: 690961612}
+--- !u!114 &823025219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 823025213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44c6f06387359fe47b708f429c70ae1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &932239527
 GameObject:
   m_ObjectHideFlags: 0

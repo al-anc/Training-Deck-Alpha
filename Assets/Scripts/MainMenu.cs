@@ -39,6 +39,11 @@ public class MainMenu : MonoBehaviour
             SceneManager.LoadScene(0);
         }
 
+        if (screenValue == 4)
+        {
+            SceneManager.LoadScene(6);
+        }
+
     }
 
 }
