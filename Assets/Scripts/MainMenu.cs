@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject howtoPlayMenu;
+    [SerializeField] private GameObject optionsMenu;
 
     void Awake()
     {
@@ -19,16 +20,21 @@ public class MainMenu : MonoBehaviour
     {
         if (screenValue == 0)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(6);
         }
         if (screenValue == 1)
         {
             mainMenu.SetActive(false);
             howtoPlayMenu.SetActive(true);
         }
-
-
         if (screenValue == 2)
+        {
+            mainMenu.SetActive(false);
+            optionsMenu.SetActive(true);
+        }
+
+
+        if (screenValue == 5)
         {
             Debug.Log("Leave");
             Application.Quit();
