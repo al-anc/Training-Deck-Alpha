@@ -26,8 +26,8 @@ public float dashspeed = 100.0f;
 
         Vector3 movement = new Vector3(Input.GetAxis("MoveHorizontal"), Input.GetAxis("MoveVertical"), 0.0f);
 
-      //  player.position += front * speed; 
-      //this rotates the turntable left and right
+        //  player.position += front * speed; 
+        //this rotates the turntable left and right
         float h = horizontalSpeed * Input.GetAxis("Mouse X");
         turntable.Rotate(0, h, 0);  
         
