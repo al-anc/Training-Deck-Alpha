@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5810811909460753922}
   - component: {fileID: 5810811909460754173}
   - component: {fileID: 5810811909460754172}
+  - component: {fileID: 1863507488141712880}
   m_Layer: 0
   m_Name: Turntable
   m_TagString: Player
@@ -95,7 +96,7 @@ MonoBehaviour:
   turntable: {fileID: 5810811909460754174}
   horizontalSpeed: 2
   verticalSpeed: 2
-  dashspeed: 15
+  dashspeed: 20
 --- !u!54 &5810811909460754173
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -128,6 +129,21 @@ MonoBehaviour:
   jumpAmount: 2
   coolDown: 0.5
   coolDownTimer: 0
+--- !u!114 &1863507488141712880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5810811909460754169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eecea04c8f765bb4690b5ce013dc1d87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 5
+  maxHealth: 5
+  isDead: 0
 --- !u!1 &5810811910185927923
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,22 +364,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &5810811909492907663
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6657814986642399636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d387c4c1c86be954ea4cdcd0d88d1b46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 6282134281123265326}
-  crouchHeight: 1
-  crouchSpeed: 0.2
-  standHeight: 2
 --- !u!95 &7059095650160742043
 Animator:
   serializedVersion: 3
@@ -395,3 +395,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac3c2df1fc829fc4c9cf37c7d772bcaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5810811909492907663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6657814986642399636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d387c4c1c86be954ea4cdcd0d88d1b46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 6282134281123265326}
+  crouchHeight: 1
+  crouchSpeed: 0.2
+  standHeight: 2
