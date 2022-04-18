@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
-    //public GameObject healthDisplay;
+    public GameObject healthDisplay;
     public GameObject projectile;
     public int currentHealth = 5;
     public int maxHealth = 5;
@@ -15,12 +15,12 @@ public class Health : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
-        //healthDisplay.GetComponent<Text>().text = "Health = " + currentHealth;
+        healthDisplay.GetComponent<Text>().text = "Health = " + currentHealth;
     }
 
     void Update()
     {
-        //healthDisplay.GetComponent<Text>().text = "Health = " + currentHealth;
+        healthDisplay.GetComponent<Text>().text = "Health = " + currentHealth;
     }
 
     public void Damage(int d) 
