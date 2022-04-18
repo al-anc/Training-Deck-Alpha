@@ -20,7 +20,7 @@ public class PlayerShoot : MonoBehaviour
     {
          if(Input.GetKeyDown(KeyCode.F))
        {
-          Instantiate(projectilePrefab, transform.position + transform.forward, transform.rotation);
+          Instantiate(projectilePrefab, transform.position, transform.rotation);
         //instantiate bullet transform.lookatplayer transform.look at first 
         Debug.Log("pew");
         canShoot = false;

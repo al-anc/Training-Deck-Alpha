@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Health : MonoBehaviour
+public class EnemyHealth : MonoBehaviour
 {
     //public GameObject healthDisplay;
     public GameObject projectile;
-    public int currentHealth = 5;
-    public int maxHealth = 5;
+    public int currentHealth = 2;
+    public int maxHealth = 2;
     public bool isDead = false;
     // Start is called before the first frame update
     void Start()
@@ -21,6 +21,9 @@ public class Health : MonoBehaviour
     void Update()
     {
         //healthDisplay.GetComponent<Text>().text = "Health = " + currentHealth;
+        if(isDead == true){
+            Destroy(gameObject);
+        }
     }
 
     public void Damage(int d) 
@@ -29,13 +32,12 @@ public class Health : MonoBehaviour
         if(currentHealth <= 0)
         {
             isDead = true;
-            SceneManager.LoadScene(2);
         }
     }
     // Update is called once per frame
-    void OnTriggerEnter(Collider c)
+    void OnTriggerEnter(Collider v)
     {
-        if(c.CompareTag("Weapon"))
+        if(v.CompareTag("Weapon"))
         {
             Debug.Log("Ow");
             Damage(1);

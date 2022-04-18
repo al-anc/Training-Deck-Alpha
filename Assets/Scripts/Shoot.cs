@@ -24,7 +24,7 @@ public class Shoot : MonoBehaviour
     void Shoot_()
     {
         transform.LookAt(player.transform);
-          Instantiate(projectilePrefab, transform.position + transform.forward, transform.rotation);
+          Instantiate(projectilePrefab, transform.position, transform.rotation);
         //instantiate bullet transform.lookatplayer transform.look at first 
         Debug.Log("pew");
         canShoot = false;
