@@ -8,6 +8,7 @@ public class PlayerShoot : MonoBehaviour
     public GameObject projectilePrefab;
     public bool canShoot = true;
     public float shootTime = 1;
+    public AudioSource shootNoise;
     // Start is called before the first frame update
 
     void CanShootAgain()

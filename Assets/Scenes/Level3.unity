@@ -711,7 +711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eecea04c8f765bb4690b5ce013dc1d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthDisplay: {fileID: 0}
+  projectile: {fileID: 0}
   currentHealth: 5
   maxHealth: 5
   isDead: 0
@@ -1331,7 +1331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eecea04c8f765bb4690b5ce013dc1d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthDisplay: {fileID: 0}
+  projectile: {fileID: 0}
   currentHealth: 2
   maxHealth: 2
   isDead: 0
@@ -2641,7 +2641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eecea04c8f765bb4690b5ce013dc1d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthDisplay: {fileID: 0}
+  projectile: {fileID: 0}
   currentHealth: 2
   maxHealth: 2
   isDead: 0
@@ -3410,6 +3410,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5810811909460754172, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}
+      propertyPath: jumpNoise
+      value: 
+      objectReference: {fileID: 1700340244}
     - target: {fileID: 5810811909460754174, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -3460,6 +3464,11 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 7993b0217c739a241b150fe3ed594c80, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}
+--- !u!82 &1700340244 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 112545271227105911, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}
+  m_PrefabInstance: {fileID: 1700340243}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1700340246 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5810811910185927923, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}

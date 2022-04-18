@@ -1048,6 +1048,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 600277931}
   m_CullTransparentMesh: 1
+--- !u!82 &689281991 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 112545271227105911, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}
+  m_PrefabInstance: {fileID: 5810811909499578754}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &691644813
 GameObject:
   m_ObjectHideFlags: 0
@@ -4324,8 +4329,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5810811909460754169, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5810811909460754172, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}
+      propertyPath: jumpNoise
+      value: 
+      objectReference: {fileID: 689281991}
     - target: {fileID: 5810811909460754172, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}
       propertyPath: coolDownTimer
       value: 0
