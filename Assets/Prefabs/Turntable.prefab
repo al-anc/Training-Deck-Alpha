@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5810811909460754172}
   - component: {fileID: 1863507488141712880}
   - component: {fileID: 4576732949130621893}
+  - component: {fileID: 1725967525302504375}
   m_Layer: 0
   m_Name: Turntable
   m_TagString: Player
@@ -142,6 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eecea04c8f765bb4690b5ce013dc1d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthDisplay: {fileID: 0}
   currentHealth: 5
   maxHealth: 5
   isDead: 0
@@ -157,6 +159,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44c6f06387359fe47b708f429c70ae1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &1725967525302504375
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5810811909460754169}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.039567217, y: 0.0756287, z: 0.020549413}
+  m_Center: {x: 0.00031083077, y: 0.029533446, z: -0.00033172593}
 --- !u!1 &5810811910185927923
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,19 +338,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8dab87d4cbd690b4388c5657deb69fd5, type: 3}
   m_PrefabInstance: {fileID: 5810811910653385925}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &5810811909492907662
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6657814986642399636}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.039567217, y: 0.06950483, z: 0.020549413}
-  m_Center: {x: 0.0003108317, y: 0.03259538, z: -0.00033172593}
 --- !u!23 &5810811909492907661
 MeshRenderer:
   m_ObjectHideFlags: 0
