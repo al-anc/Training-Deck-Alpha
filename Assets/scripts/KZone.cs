@@ -8,6 +8,6 @@ public class KZone : MonoBehaviour
       void OnTriggerEnter(Collider c)
         {
           if(c.CompareTag("Player"))
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(2);
         }
 }
