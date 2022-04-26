@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7414761309538778924}
   - component: {fileID: 7414761309538778926}
   - component: {fileID: 3544548165244101281}
+  - component: {fileID: 8006300156035622089}
   m_Layer: 0
   m_Name: Lilguy
   m_TagString: Untagged
@@ -133,6 +134,7 @@ MonoBehaviour:
   range: 5
   canShoot: 1
   shootTime: 0.8
+  boom: {fileID: 0}
 --- !u!114 &7414761309538778926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,6 +169,25 @@ MonoBehaviour:
   currentHealth: 2
   maxHealth: 2
   isDead: 0
+--- !u!95 &8006300156035622089
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7649346313851912674}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 129dcfe1c35fb71498fb59c9c85642cb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8422433619536439760
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,28 +4,10 @@ using UnityEngine;
 
 public class Crouch : MonoBehaviour
 {
-    public Transform player;
-    [SerializeField] private float crouchHeight = 1.0f;
-    [SerializeField] private float crouchSpeed = 5;
-    [SerializeField] private float standHeight = 2f;
+    public CapsuleCollider coll;
+    public Transform body;
     private bool crouched = false;
-    private float controllerHeight = 2;
-
     
-    public float ControllerHeight
-    {
-        get 
-        {
-            if (crouched)
-            {
-                return crouchHeight;
-            }
-            else
-            {
-                return standHeight;
-            }
-        }
-    }
     void Start()
     {
         
@@ -37,18 +19,20 @@ public class Crouch : MonoBehaviour
         if(Input.GetButtonDown("Crouch"))
         {
             crouched = !crouched;
-        }
-        if(crouched == true){
-        controllerHeight = Mathf.Lerp(controllerHeight,ControllerHeight, crouchSpeed * Time.deltaTime);
-        player.localScale = new Vector3 (1,2.5f,1);
-        transform.localPosition = new Vector3 (0,2.5f,0);
-        }
+       
+            if(crouched == true){
+                
+                body.localScale = new Vector3 (1,.5f,1);
+                coll.height = 1;
+                                }
 
-        if(!crouched)
-        {
-            player.localScale = new Vector3 (1,5,1);
-        transform.localPosition = new Vector3 (0,5.38f,0);
-        
+            if(!crouched)
+            {
+                body.localScale = new Vector3 (1,1.0f,1);
+                coll.height = 2;
+            
+            }
         }
+        
     }
 }

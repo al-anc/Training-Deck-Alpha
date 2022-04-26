@@ -129,7 +129,7 @@ MonoBehaviour:
   turntable: {fileID: 5810811909460754174}
   horizontalSpeed: 2
   verticalSpeed: 2
-  dashspeed: 20
+  dashspeed: 30
 --- !u!54 &5810811909460754173
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -175,6 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eecea04c8f765bb4690b5ce013dc1d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthDisplay: {fileID: 0}
   projectile: {fileID: 0}
   currentHealth: 5
   maxHealth: 5
@@ -325,13 +326,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5810811910185927923}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.051400006, z: -0.2}
+  m_LocalRotation: {x: 0.08715578, y: 0, z: 0, w: 0.9961947}
+  m_LocalPosition: {x: 0, y: 0.1, z: -0.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5810811909460754174}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 10, y: 0, z: 0}
 --- !u!20 &5810811910185927921
 Camera:
   m_ObjectHideFlags: 0
@@ -457,23 +458,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 16cd286019f1529418598b8327708500, type: 3}
   m_PrefabInstance: {fileID: 753421503045721371}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4586524148304635117
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 483531183177818186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69b04e436f9557d40ae921b83e21b9ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 6657814986642399636}
-  projectilePrefab: {fileID: 4148282870013773149, guid: 66a6b67c8a1b5d44ba385a60bb144d82, type: 3}
-  canShoot: 1
-  shootTime: 1
-  shootNoise: {fileID: 7026872876781911906}
 --- !u!82 &7026872876781911906
 AudioSource:
   m_ObjectHideFlags: 0
@@ -570,6 +554,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4586524148304635117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483531183177818186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69b04e436f9557d40ae921b83e21b9ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 6657814986642399636}
+  projectilePrefab: {fileID: 4148282870013773149, guid: 66a6b67c8a1b5d44ba385a60bb144d82, type: 3}
+  canShoot: 1
+  shootTime: 1
+  pow: {fileID: 0}
 --- !u!1001 &5810811910653385925
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -742,7 +743,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d387c4c1c86be954ea4cdcd0d88d1b46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 6282134281123265326}
-  crouchHeight: 1
-  crouchSpeed: 0.2
-  standHeight: 2
+  coll: {fileID: 0}
+  body: {fileID: 0}
