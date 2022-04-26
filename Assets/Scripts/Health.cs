@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class Health : MonoBehaviour
 {
     public GameObject healthDisplay;
-    public GameObject projectile;
     public int currentHealth = 5;
     public int maxHealth = 5;
     public bool isDead = false;
@@ -30,6 +29,9 @@ public class Health : MonoBehaviour
         {
             isDead = true;
             SceneManager.LoadScene(2);
+        }
+        else if (currentHealth > maxHealth){
+            currentHealth = maxHealth;
         }
     }
     // Update is called once per frame

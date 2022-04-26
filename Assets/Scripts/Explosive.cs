@@ -9,10 +9,6 @@ public class Explosive : MonoBehaviour
     float starttime;
     public float explodetime = 1f;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void FixedUpdate()
@@ -26,26 +22,25 @@ public class Explosive : MonoBehaviour
             {
                 Debug.Log(transform.localScale);
                 DamageAllInRange();
-                Debug.Break();
-               // Destroy(gameObject);
+                //Debug.Break();
+                Destroy(gameObject);
             }
         }
     }
     void DamageAllInRange()
     {
-      SphereCollider SC = gameObject.GetComponent<SphereCollider>();
+        SphereCollider SC = gameObject.GetComponent<SphereCollider>();
 
-
-     Collider[] hitColliders = Physics.OverlapSphere(transform.position + SC.center, SC.radius);
-     foreach (var coll in hitColliders)
-     {
-         Debug.Log(coll.name);
-        var h = coll.gameObject.GetComponent<Health>();
-        if(h != null)
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position + SC.center, SC.radius);
+        foreach (var coll in hitColliders)
         {
-           h.Damage(5);
-        }
-     }
+            Debug.Log(coll.name);
+            var h = coll.gameObject.GetComponent<Health>();
+            if(h != null)
+            {
+                h.Damage(3);
+            }
+    }
      
     
         //scale up collider 

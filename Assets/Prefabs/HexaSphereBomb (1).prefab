@@ -92,7 +92,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6763337033547879052}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.045140684
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExploding: 0
-  sizerange: {x: 0.25, y: 0.5}
+  sizerange: {x: 0.5, y: 0.5}
   explodetime: 1
 --- !u!95 &8334368536559482737
 Animator:
