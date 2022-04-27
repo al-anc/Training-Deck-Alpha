@@ -11,7 +11,7 @@ public class WinPlatform : MonoBehaviour
         if (c.CompareTag("Player"))
         {   
             Cursor.lockState = CursorLockMode.None;
-             SceneManager.LoadScene(3);
+             SceneManager.LoadScene(6);
         }
     }
 }
