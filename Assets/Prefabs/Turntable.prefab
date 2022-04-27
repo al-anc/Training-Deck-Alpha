@@ -330,11 +330,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e566d148abf12e4d90f5596cadc187b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  jumpAmount: 10
-  coolDown: 1
+  rb: {fileID: 5810811909460754173}
+  jumpAmount: 2
+  coolDown: 0.5
   coolDownTimer: 0
-  jumpNoise: {fileID: 0}
+  jumpNoise: {fileID: 112545271227105911}
 --- !u!114 &-4720918469152567918
 MonoBehaviour:
   m_ObjectHideFlags: 0

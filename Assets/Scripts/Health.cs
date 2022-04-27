@@ -28,7 +28,7 @@ public class Health : MonoBehaviour
         if(currentHealth <= 0)
         {
             isDead = true;
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(5);
         }
         else if (currentHealth > maxHealth){
             currentHealth = maxHealth;

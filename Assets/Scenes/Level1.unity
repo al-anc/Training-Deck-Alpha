@@ -2029,6 +2029,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &717262985 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 5810811909460754173, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}
+  m_PrefabInstance: {fileID: 5810811909499578754}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &736124303
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6502,6 +6507,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5218431983739089756, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 717262985}
+    - target: {fileID: -5218431983739089756, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}
+      propertyPath: coolDown
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -5218431983739089756, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}
+      propertyPath: jumpNoise
+      value: 
+      objectReference: {fileID: 689281991}
+    - target: {fileID: -5218431983739089756, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}
+      propertyPath: jumpAmount
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 112545271227105911, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}
       propertyPath: m_Volume
       value: 0.5

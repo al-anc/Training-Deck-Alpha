@@ -47,7 +47,7 @@ public class MainMenu : MonoBehaviour
 
         if (screenValue == 4)
         {
-            SceneManager.LoadScene(6);
+            SceneManager.LoadScene(1);
         }
 
     }
