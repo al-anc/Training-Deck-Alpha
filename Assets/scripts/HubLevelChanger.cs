@@ -17,17 +17,17 @@ public class HubLevelChanger : MonoBehaviour
         {
             if(isOne == true)
             {
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(2);
             }
 
             if(isTwo == true)
             {
-                SceneManager.LoadScene(4);
+                SceneManager.LoadScene(3);
             }
 
             if(isThree == true)
             {
-                SceneManager.LoadScene(5);
+                SceneManager.LoadScene(4);
             }
         }
     }

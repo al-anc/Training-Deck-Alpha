@@ -16,22 +16,22 @@ public class scene_Changer : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.H))
         {
-            SceneManager.LoadScene(6);
+            SceneManager.LoadScene(1);
         }
 
         if(Input.GetKeyDown(KeyCode.J))
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
         }
 
         if(Input.GetKeyDown(KeyCode.K))
         {
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(3);
         }
 
         if(Input.GetKeyDown(KeyCode.L))
         {
-            SceneManager.LoadScene(5);
+            SceneManager.LoadScene(4);
         }
     }
 }
