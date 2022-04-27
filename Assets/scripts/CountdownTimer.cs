@@ -14,7 +14,7 @@ public class CountdownTimer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        textDisplay.GetComponent<Text>().text = "00:" + secondsLeft;
+        textDisplay.GetComponent<Text>().text = "Timer = 00:" + secondsLeft;
     }
 
     // Update is called once per frame
@@ -33,11 +33,11 @@ public class CountdownTimer : MonoBehaviour
         secondsLeft -= 1;
         if(secondsLeft < 10)
         {
-            textDisplay.GetComponent<Text>().text = "00:0" + secondsLeft;
+            textDisplay.GetComponent<Text>().text = "Timer = 00:0" + secondsLeft;
         }
         else
         {
-            textDisplay.GetComponent<Text>().text = "00:" + secondsLeft;
+            textDisplay.GetComponent<Text>().text = "Timer = 00:" + secondsLeft;
         }
         if(secondsLeft == 0)
         {   

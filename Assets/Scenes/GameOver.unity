@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 220526123}
   - component: {fileID: 220526122}
   m_Layer: 5
-  m_Name: RestartButton
+  m_Name: HubButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -212,7 +212,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 17959de5023f69040859f076842035f3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e9baa638134eb584eb46dfe0d602ae07, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -598,7 +598,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1013,6 +1013,7 @@ GameObject:
   - component: {fileID: 1499953584}
   - component: {fileID: 1499953588}
   - component: {fileID: 1499953589}
+  - component: {fileID: 1499953590}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1116,6 +1117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenu: {fileID: 0}
   howtoPlayMenu: {fileID: 0}
+  optionsMenu: {fileID: 0}
 --- !u!82 &1499953589
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1212,6 +1214,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1499953590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499953583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44c6f06387359fe47b708f429c70ae1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2109089226
 GameObject:
   m_ObjectHideFlags: 0

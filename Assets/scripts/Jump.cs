@@ -8,6 +8,8 @@ public Rigidbody rb;
 public float jumpAmount = 10;
 public float coolDown = 1;
 public float coolDownTimer;
+public AudioSource jumpNoise;
+
 void Update()
 {
     if(coolDownTimer > 0 )
@@ -23,6 +25,7 @@ void Update()
         rb.AddForce(Vector3.up * jumpAmount, ForceMode.Impulse);
         Debug.Log("hi");
         coolDownTimer = coolDown;
+        jumpNoise.Play();
     }
 
 }

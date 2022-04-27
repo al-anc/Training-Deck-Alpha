@@ -5,10 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class KZone : MonoBehaviour
 {
-      void OnTriggerEnter(Collider other)
+      void OnTriggerEnter(Collider c)
         {
-          Cursor.lockState = CursorLockMode.None;
+          if(c.CompareTag("Player"))
             SceneManager.LoadScene(2);
-            
         }
 }

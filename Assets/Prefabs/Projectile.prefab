@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 393399159211495490}
   - component: {fileID: 2490865779087369352}
   - component: {fileID: 7259030044062888830}
+  - component: {fileID: 4557727189638122988}
   m_Layer: 0
   m_Name: Projectile
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 4148282870013773149}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.3551, y: 0.38717, z: 0.18509209}
-  m_LocalScale: {x: -0.13208, y: 0.17359537, z: 1.3208613}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -95,3 +96,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpeed: 1
+--- !u!65 &4557727189638122988
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4148282870013773149}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.013648672, y: 0.013830066, z: 0.02000511}
+  m_Center: {x: -0.00076214626, y: 0.0012006362, z: 0}

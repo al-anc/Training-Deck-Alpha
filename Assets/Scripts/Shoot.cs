@@ -9,6 +9,7 @@ public class Shoot : MonoBehaviour
     public float range = 10;
     public bool canShoot = true;
     public float shootTime = 2;
+    public Transform boom;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,9 +25,10 @@ public class Shoot : MonoBehaviour
     void Shoot_()
     {
         transform.LookAt(player.transform);
-          Instantiate(projectilePrefab, transform.position + transform.forward, Quaternion.identity);
+        Vector3 angles = new Vector3(0,transform.localEulerAngles.y,0);
+        transform.localEulerAngles = angles;
+          Instantiate(projectilePrefab, boom.position, transform.rotation);
         //instantiate bullet transform.lookatplayer transform.look at first 
-        Debug.Log("pew");
         canShoot = false;
         Invoke("CanShootAgain",shootTime);
     }
