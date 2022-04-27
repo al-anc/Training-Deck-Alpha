@@ -13,7 +13,7 @@ public class scene_Changer : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    { 
         if(Input.GetKeyDown(KeyCode.H))
         {
             SceneManager.LoadScene(1);
@@ -32,6 +32,11 @@ public class scene_Changer : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.L))
         {
             SceneManager.LoadScene(4);
+        }
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+          Application.Quit();
+          Debug.Log("Application End");
         }
     }
 }
