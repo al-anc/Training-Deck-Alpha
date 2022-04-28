@@ -5204,6 +5204,7 @@ MonoBehaviour:
   MedDifficulty: 0
   HardDifficulty: 0
   invincible: 0
+  finalSceneload: 0
 --- !u!4 &1571990376
 Transform:
   m_ObjectHideFlags: 0
