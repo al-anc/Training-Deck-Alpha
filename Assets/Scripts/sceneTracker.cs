@@ -24,6 +24,14 @@ public class sceneTracker : MonoBehaviour
         
     }
 
+    void Update()
+    {
+        if (Level1Completed == 1 && Level2Completed == 1 && Level3Completed == 1)
+        {
+            SceneManager.LoadScene(7);
+        }
+    }
+
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         scene = SceneManager.GetActiveScene();

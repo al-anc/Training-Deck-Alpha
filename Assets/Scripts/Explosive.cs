@@ -53,7 +53,7 @@ public class Explosive : MonoBehaviour
         {
             return;
         }
-        if(c.CompareTag("Weapon")||c.CompareTag("Player")||c.CompareTag("Enemy"))
+        if(c.CompareTag("PlayerWeapon")||c.CompareTag("Player")||c.CompareTag("Enemy"))
         {
             starttime = Time.time;
             isExploding = true;
