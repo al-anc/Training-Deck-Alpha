@@ -144,7 +144,7 @@ public class P3Controls : MonoBehaviour
         coolDownTimer = 0;
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) && coolDownTimer == 0 || Input.GetButtonDown("Dash") && coolDownTimer == 0)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && coolDownTimer == 0 || Input.GetButton("Dash") && coolDownTimer == 0)
         {
             coolDownTimer = coolDown;
             money *= (Time.deltaTime * dashspeed);
