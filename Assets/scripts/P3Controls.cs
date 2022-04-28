@@ -15,6 +15,9 @@ public class P3Controls : MonoBehaviour
     public int isWalking = 0;
     public int isStrafing = 0;
 
+    float v;
+    float h;
+
     Animator animator;
     //public bool crouch = false;
     //pressing forward or backwards we move at the players 
@@ -36,6 +39,7 @@ public class P3Controls : MonoBehaviour
 
         float horizontal = Input.GetAxisRaw("MoveHorizontal");
         float vertical = Input.GetAxisRaw("MoveVertical");
+        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
         if (horizontal > 0.5f){
             isStrafing = 1;
         }
@@ -52,21 +56,67 @@ public class P3Controls : MonoBehaviour
         else if (vertical < -0.5f){
             isWalking = -1;
         }
-        else{
+        else
+        {
             isWalking = 0;
         }
-        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
         //  player.position += front * speed; 
-        //this rotates the turntable left and right
-        float h = horizontalSpeed * Input.GetAxis("Mouse X");
+        //this rotates the turntable left and rightif (Input.GetAxis("Mouse X") > 0.05f){
+        if (Input.GetAxis("Mouse X") > 0.05f)
+        {
+            h = horizontalSpeed * Input.GetAxis("Mouse X");
+        }
+        else if(Input.GetAxis("TurnHorizontal") > 0.01f)//replace with camera X axis for controller input.
+        {
+            h = horizontalSpeed* Input.GetAxis("TurnHorizontal");
+        }
+        else if (Input.GetAxis("Mouse X") < -0.05f)
+        {
+            h = horizontalSpeed * Input.GetAxis("Mouse X");
+        }
+        else if (Input.GetAxis("TurnHorizontal") < -0.01f)//replace with camera X axis for controller input.
+        {
+            h = horizontalSpeed * Input.GetAxis("TurnHorizontal");
+        }
+        else if (Input.GetAxis("Mouse X") > -0.05f && Input.GetAxis("Mouse X") < 0.05f)
+        {
+            h = 0;
+        }
+        else if (Input.GetAxis("TurnHorizontal") > -0.01f && Input.GetAxis("TurnHorizontal") < 0.01f)//replace with camera X axis for controller input.
+        {
+            h = 0;
+        }
         turntable.Rotate(0, h, 0);
 
         //controls camera up and down does not move player
-        float v = verticalSpeed * Input.GetAxis("Mouse Y");
+        if (Input.GetAxis("Mouse Y") > 0.05f)
+        {
+            v = verticalSpeed * Input.GetAxis("Mouse Y");
+        }
+        else if (Input.GetAxis("TurnVertical") > 0.01f)//replace with camera Y axis for controller input.
+        {
+            v = verticalSpeed * Input.GetAxis("TurnVertical");
+        }
+        else if (Input.GetAxis("Mouse Y") < -0.05f)
+        {
+            v = verticalSpeed * Input.GetAxis("Mouse Y");
+        }
+        else if (Input.GetAxis("TurnVertical") < -0.01f)//replace with camera Y axis for controller input.
+        {
+            v = verticalSpeed * Input.GetAxis("TurnVertical");
+        }
+        else if (Input.GetAxis("Mouse Y") > -0.05f && Input.GetAxis("Mouse Y") < 0.05f)
+        {
+            v = 0;
+        }
+        else if (Input.GetAxis("TurnVertical") > -0.01f && Input.GetAxis("TurnVertical") < 0.01f)//replace with camera Y axis for controller input.
+        {
+            v = 0;
+        }
         cam.Rotate(v * -1, 0, 0);
+        //End of Controller
 
-        //
         Vector3 front = cam.forward;
         front.y = 0;
         // turntable.position += front * speed; 
@@ -87,9 +137,10 @@ public class P3Controls : MonoBehaviour
         {
             money += cam.right;
         }
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetButton("Dash"))
         {
             money *= (Time.deltaTime * dashspeed);
+            Debug.Log("Dashed");
         }
         else
         {
