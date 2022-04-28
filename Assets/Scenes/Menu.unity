@@ -531,10 +531,10 @@ MonoBehaviour:
     m_Alignment: 6
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Difficulty
+  m_Text: Difficulty (Works only on initial load)
 --- !u!222 &163402026
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4591,10 +4591,10 @@ MonoBehaviour:
     m_Alignment: 6
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Cheats
+  m_Text: Cheats (Works only on initial load)
 --- !u!222 &1518661249
 CanvasRenderer:
   m_ObjectHideFlags: 0
