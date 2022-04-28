@@ -11,7 +11,7 @@ public class P3Controls : MonoBehaviour
     public Transform turntable;
     public  float horizontalSpeed = 2.0f;
     public float verticalSpeed = 2.0f;
-    public float dashspeed = 100.0f;
+    public float dashspeed = 120.0f;
     public int isWalking = 0;
     public int isStrafing = 0;
     float v;
