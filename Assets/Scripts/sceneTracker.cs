@@ -16,6 +16,7 @@ public class sceneTracker : MonoBehaviour
     public bool  MedDifficulty = false;
     public bool  HardDifficulty = false;
     public bool  invincible = false;
+    public bool  finalSceneload = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,9 +27,10 @@ public class sceneTracker : MonoBehaviour
 
     void Update()
     {
-        if (Level1Completed == 1 && Level2Completed == 1 && Level3Completed == 1)
+        if (Level1Completed == 1 && Level2Completed == 1 && Level3Completed == 1 && !finalSceneload)
         {
             SceneManager.LoadScene(7);
+            finalSceneload = true;
         }
     }
 
