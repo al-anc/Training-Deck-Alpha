@@ -34,22 +34,22 @@ public class Health : MonoBehaviour
     public void Damage(int d) 
     {
         currentHealth -= d;
-        if(currentHealth <= 0)
+        /*if(currentHealth <= 0)
         {
             isDead = true;
-            //scene = SceneManager.GetActiveScene();
-            //sceneDeath = scene.buildIndex;
-            //Debug.Log(sceneDeath);
+            scene = SceneManager.GetActiveScene();
+            sceneDeath = scene.buildIndex;
+            Debug.Log(sceneDeath);
             SceneManager.LoadScene(5);
-        }
-        else if (currentHealth > maxHealth){
+        }*/
+        if (currentHealth > maxHealth){
             currentHealth = maxHealth;
         }
     }
     // Update is called once per frame
     void OnTriggerEnter(Collider c)
     {
-        if(c.CompareTag("Weapon"))
+        if(c.CompareTag("Weapon") || c.CompareTag("BossWeapon"))
         {
             Debug.Log("Ow");
             Damage(1);

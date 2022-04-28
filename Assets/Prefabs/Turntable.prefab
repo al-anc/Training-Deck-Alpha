@@ -289,7 +289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 5810811909460754169}
-  projectilePrefab: {fileID: 4148282870013773149, guid: 66a6b67c8a1b5d44ba385a60bb144d82, type: 3}
+  projectilePrefab: {fileID: 1771301452231902216, guid: 0c5c5de85844931479046ee9e837d740, type: 3}
   canShoot: 1
   shootTime: 0.2
   pow: {fileID: 4755744572986078967}
