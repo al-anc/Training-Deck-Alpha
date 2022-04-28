@@ -1195,7 +1195,19 @@ MonoBehaviour:
   m_Group: {fileID: 163402027}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1571990375}
+        m_TargetAssemblyTypeName: sceneTracker, Assembly-CSharp
+        m_MethodName: difficulty
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &364536203
 GameObject:
@@ -1433,7 +1445,19 @@ MonoBehaviour:
   m_Group: {fileID: 163402027}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1571990375}
+        m_TargetAssemblyTypeName: sceneTracker, Assembly-CSharp
+        m_MethodName: difficulty
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &450088575
 GameObject:
@@ -3792,7 +3816,19 @@ MonoBehaviour:
   m_Group: {fileID: 163402027}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1571990375}
+        m_TargetAssemblyTypeName: sceneTracker, Assembly-CSharp
+        m_MethodName: difficulty
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 1
 --- !u!1 &1415152082
 GameObject:
@@ -5164,6 +5200,10 @@ MonoBehaviour:
   Level1Completed: 0
   Level2Completed: 0
   Level3Completed: 0
+  EasyDifficulty: 0
+  MedDifficulty: 0
+  HardDifficulty: 0
+  invincible: 0
 --- !u!4 &1571990376
 Transform:
   m_ObjectHideFlags: 0
@@ -6437,7 +6477,19 @@ MonoBehaviour:
   m_Group: {fileID: 1518661247}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1571990375}
+        m_TargetAssemblyTypeName: sceneTracker, Assembly-CSharp
+        m_MethodName: invincibility
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &2104753585
 GameObject:

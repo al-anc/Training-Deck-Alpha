@@ -12,6 +12,10 @@ public class sceneTracker : MonoBehaviour
     public int Level1Completed = 0;
     public int Level2Completed = 0;
     public int Level3Completed = 0;
+    public bool  EasyDifficulty = false;
+    public bool  MedDifficulty = false;
+    public bool  HardDifficulty = false;
+    public bool  invincible = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +31,38 @@ public class sceneTracker : MonoBehaviour
         if(sceneHistory.Count >= 2){
             Debug.Log(sceneHistory[sceneHistory.Count-1]);
             Debug.Log(sceneHistory[sceneHistory.Count-2]);
+        }
+    }
+    public void difficulty(int difficultyValue)
+    {
+        if (difficultyValue == 0)
+        {
+            EasyDifficulty = true;
+            MedDifficulty = false;
+            HardDifficulty = false;
+        }
+
+        if (difficultyValue == 1)
+        {
+            EasyDifficulty = false;
+            MedDifficulty = true;
+            HardDifficulty = false;
+        }
+
+        if(difficultyValue == 2)
+        {
+            EasyDifficulty = false;
+            MedDifficulty = false;
+            HardDifficulty = true;
+        }
+    }
+    public void invincibility(bool invincibilityToggle)
+    {
+        if(invincibilityToggle){
+            invincible = true;
+        }
+        if(!invincibilityToggle){
+            invincible = false;
         }
     }
 }

@@ -15,14 +15,27 @@ public class Health : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        var sceneTrack = GameObject.Find("SceneTracker");
+        var difficultyTracker = sceneTrack.GetComponent<sceneTracker>();
+        if(difficultyTracker.EasyDifficulty){
+            maxHealth = 10;
+        }
+        else if(difficultyTracker.MedDifficulty){
+            maxHealth = 5;
+        }
+        else if(difficultyTracker.HardDifficulty){
+            maxHealth = 3;
+        }
         currentHealth = maxHealth;
         healthDisplay.GetComponent<Text>().text = "Health = " + currentHealth;
     }
 
     void Update()
     {
+        var sceneTrack = GameObject.Find("SceneTracker");
+        var invincibilityCheck = sceneTrack.GetComponent<sceneTracker>();
         healthDisplay.GetComponent<Text>().text = "Health = " + currentHealth;
-        if(currentHealth <= 0){
+        if(currentHealth <= 0 && !invincibilityCheck.invincible){
             isDead = true;
             //scene = SceneManager.GetActiveScene();
             //sceneDeath = scene.buildIndex;
@@ -33,7 +46,12 @@ public class Health : MonoBehaviour
 
     public void Damage(int d) 
     {
-        currentHealth -= d;
+        var sceneTrack = GameObject.Find("SceneTracker");
+        var invincibilityCheck = sceneTrack.GetComponent<sceneTracker>();
+        if (!invincibilityCheck.invincible)
+        {
+            currentHealth -= d;
+        }
         /*if(currentHealth <= 0)
         {
             isDead = true;

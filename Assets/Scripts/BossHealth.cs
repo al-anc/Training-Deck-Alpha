@@ -9,6 +9,9 @@ public class BossHealth : MonoBehaviour
     //public GameObject healthDisplay;
     public GameObject Boss;
     public GameObject Level3WinPlatform;
+    public GameObject HealthCrystalGroup1;
+    public GameObject HealthCrystalGroup2;
+    public GameObject HealthCrystalGroup3;
     public int currentHealth = 10;
     public int maxHealth = 10;
     public bool isDead = false;
@@ -39,14 +42,18 @@ public class BossHealth : MonoBehaviour
         var Terminal3 = GameObject.Find("Terminal3");
         var checkpoint3 = Terminal3.GetComponent<TerminalHealth>();
 
+
         if(checkpoint1.terminal1 == 1 && checkpoint2.terminal2 == 0 && checkpoint3.terminal3 == 0){
             Boss.transform.position = new Vector3(0, 1.450f, 0);
+            HealthCrystalGroup1.SetActive(true);
         }
         else if(checkpoint1.terminal1 == 1 && checkpoint2.terminal2 == 1 && checkpoint3.terminal3 == 0){
             Boss.transform.position = new Vector3(0, 3.25f, 0);
+            HealthCrystalGroup2.SetActive(true);
         }
         else if(checkpoint1.terminal1 == 1 && checkpoint2.terminal2 == 1 && checkpoint3.terminal3 == 1){
             Boss.transform.position = new Vector3(0, 0.240f, 0);
+            HealthCrystalGroup3.SetActive(true);
         }
     }
 
