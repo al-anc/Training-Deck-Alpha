@@ -3755,7 +3755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a357209caea3e4c21ae725ffbb647e90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenu: {fileID: 0}
+  mainMenu: {fileID: 1428264604}
   howtoPlayMenu: {fileID: 0}
   optionsMenu: {fileID: 0}
 --- !u!114 &1428264607
@@ -5665,6 +5665,7 @@ MonoBehaviour:
   MedDifficulty: 0
   HardDifficulty: 0
   invincible: 0
+  finalSceneload: 0
 --- !u!4 &2105984680
 Transform:
   m_ObjectHideFlags: 0
