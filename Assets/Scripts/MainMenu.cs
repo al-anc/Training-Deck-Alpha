@@ -56,6 +56,13 @@ public class MainMenu : MonoBehaviour
             SceneManager.LoadScene(previousScene.sceneHistory[previousScene.sceneHistory.Count-2]);
             //sceneTrack.GetComponent<sceneTracker>().sceneHistory[sceneHistory.Count-2]
         }
-    }
+
+        if (screenValue == 8)
+        {
+            mainMenu.SetActive(true);
+            optionsMenu.SetActive(false);
+        }
+    }   
+
 
 }
