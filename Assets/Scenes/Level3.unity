@@ -1052,6 +1052,7 @@ MonoBehaviour:
   currentHealth: 5
   maxHealth: 5
   isDead: 0
+  sceneDeath: 0
 --- !u!114 &195902458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1101,49 +1102,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -5218431983739089756, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}
-      propertyPath: rb
-      value: 
-      objectReference: {fileID: 256152436}
-    - target: {fileID: -5218431983739089756, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}
-      propertyPath: coolDown
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: -5218431983739089756, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}
-      propertyPath: jumpNoise
-      value: 
-      objectReference: {fileID: 256152434}
-    - target: {fileID: -5218431983739089756, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}
-      propertyPath: jumpAmount
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 1863507488141712880, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}
       propertyPath: healthDisplay
       value: 
       objectReference: {fileID: 1713859521}
-    - target: {fileID: 5810811909460753922, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 256152435}
     - target: {fileID: 5810811909460754169, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 5810811909460754169, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5810811909460754169, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 5810811909460754172, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}
-      propertyPath: jumpNoise
-      value: 
-      objectReference: {fileID: 256152434}
-    - target: {fileID: 5810811909460754172, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}
-      propertyPath: coolDownTimer
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5810811909460754174, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}
       propertyPath: m_RootOrder
@@ -1189,28 +1154,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7059095650160742043, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 7993b0217c739a241b150fe3ed594c80, type: 2}
-    m_RemovedComponents:
-    - {fileID: 5810811909492907663, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}
---- !u!82 &256152434 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 112545271227105911, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}
-  m_PrefabInstance: {fileID: 256152433}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &256152435 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5810811909460754174, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}
-  m_PrefabInstance: {fileID: 256152433}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &256152436 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 5810811909460754173, guid: e51b8e959aa58ff4fa46a194e91f0503, type: 3}
-  m_PrefabInstance: {fileID: 256152433}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &270178523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19715,6 +19660,7 @@ MonoBehaviour:
   mainMenu: {fileID: 0}
   howtoPlayMenu: {fileID: 0}
   optionsMenu: {fileID: 0}
+  sceneTrack: {fileID: 0}
 --- !u!114 &1407396174
 MonoBehaviour:
   m_ObjectHideFlags: 0

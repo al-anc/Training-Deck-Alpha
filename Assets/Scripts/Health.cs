@@ -10,6 +10,8 @@ public class Health : MonoBehaviour
     public int currentHealth = 5;
     public int maxHealth = 5;
     public bool isDead = false;
+    public int sceneDeath;
+    Scene scene;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,13 @@ public class Health : MonoBehaviour
     void Update()
     {
         healthDisplay.GetComponent<Text>().text = "Health = " + currentHealth;
+        if(currentHealth <= 0){
+            isDead = true;
+            //scene = SceneManager.GetActiveScene();
+            //sceneDeath = scene.buildIndex;
+            //Debug.Log(sceneDeath);
+            SceneManager.LoadScene(5);
+        }
     }
 
     public void Damage(int d) 
@@ -28,6 +37,9 @@ public class Health : MonoBehaviour
         if(currentHealth <= 0)
         {
             isDead = true;
+            //scene = SceneManager.GetActiveScene();
+            //sceneDeath = scene.buildIndex;
+            //Debug.Log(sceneDeath);
             SceneManager.LoadScene(5);
         }
         else if (currentHealth > maxHealth){

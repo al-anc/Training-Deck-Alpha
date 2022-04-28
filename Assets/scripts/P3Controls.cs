@@ -12,6 +12,8 @@ public class P3Controls : MonoBehaviour
     public  float horizontalSpeed = 2.0f;
     public float verticalSpeed = 2.0f;
     public float dashspeed = 100.0f;
+    public int isWalking = 0;
+    public int isStrafing = 0;
 
     Animator animator;
     //public bool crouch = false;
@@ -34,6 +36,25 @@ public class P3Controls : MonoBehaviour
 
         float horizontal = Input.GetAxisRaw("MoveHorizontal");
         float vertical = Input.GetAxisRaw("MoveVertical");
+        if (horizontal > 0.5f){
+            isStrafing = 1;
+        }
+        else if (horizontal < -0.5f){
+            isStrafing = -1;
+        }
+        else{
+            isStrafing = 0;
+        }
+
+        if(vertical > 0.5f){
+            isWalking = 1;
+        }
+        else if (vertical < -0.5f){
+            isWalking = -1;
+        }
+        else{
+            isWalking = 0;
+        }
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
         //  player.position += front * speed; 
@@ -50,19 +71,19 @@ public class P3Controls : MonoBehaviour
         front.y = 0;
         // turntable.position += front * speed; 
         Vector3 money = new Vector3(0, 0, 0);
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) || (isWalking == 1))
         {
             money += cam.forward;
         }
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S) || (isWalking == -1))
         {
             money -= cam.forward;
         }
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || (isStrafing == -1))
         {
             money -= cam.right;
         }
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) || (isStrafing == 1))
         {
             money += cam.right;
         }
@@ -75,14 +96,14 @@ public class P3Controls : MonoBehaviour
             money *= (Time.deltaTime * speed);
         }
 
-        if (Input.GetButton("Dash"))
+        /*if (Input.GetButton("Dash")) -- Disallowed ability to move WASD, commented out to fix problem.
         {
             money *= (Time.deltaTime * dashspeed);
         }
         else
         {
             money *= (Time.deltaTime * speed);
-        }
+        }*/
 
         money.y = 0;
         turntable.position += money;

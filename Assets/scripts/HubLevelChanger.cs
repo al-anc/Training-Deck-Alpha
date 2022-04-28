@@ -15,17 +15,19 @@ public class HubLevelChanger : MonoBehaviour
     {
         if(c.CompareTag("Player"))
         {
-            if(isOne == true)
+            var sceneTrack = GameObject.Find("SceneTracker");
+            var winCheck = sceneTrack.GetComponent<sceneTracker>();
+            if(isOne == true && winCheck.Level1Completed == 0)
             {
                 SceneManager.LoadScene(2);
             }
 
-            if(isTwo == true)
+            if(isTwo == true && winCheck.Level2Completed == 0)
             {
                 SceneManager.LoadScene(3);
             }
 
-            if(isThree == true)
+            if(isThree == true && winCheck.Level3Completed == 0)
             {
                 SceneManager.LoadScene(4);
             }

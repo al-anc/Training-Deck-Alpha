@@ -50,6 +50,12 @@ public class MainMenu : MonoBehaviour
             SceneManager.LoadScene(1);
         }
 
+        if (screenValue == 7){
+            var sceneTrack = GameObject.Find("SceneTracker");
+            var previousScene = sceneTrack.GetComponent<sceneTracker>();
+            SceneManager.LoadScene(previousScene.sceneHistory[previousScene.sceneHistory.Count-2]);
+            //sceneTrack.GetComponent<sceneTracker>().sceneHistory[sceneHistory.Count-2]
+        }
     }
 
 }
