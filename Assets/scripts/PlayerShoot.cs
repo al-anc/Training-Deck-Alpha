@@ -19,19 +19,29 @@ public class PlayerShoot : MonoBehaviour
     // Update is calltheed once per frame
     void Update()
     {
-         if(Input.GetKeyDown(KeyCode.F))
-       {
-          Instantiate(projectilePrefab, pow.position, transform.rotation);
-        //instantiate bullet transform.lookatplayer transform.look at first 
-        Debug.Log("pew");
-        canShoot = false;
-        Invoke("CanShootAgain",shootTime);
-       }
-        if(canShoot == false)
+         if(Input.GetKeyDown(KeyCode.F)) 
+            {
+                Instantiate(projectilePrefab, pow.position, transform.rotation);
+                //instantiate bullet transform.lookatplayer transform.look at first 
+                Debug.Log("pew");
+                canShoot = false;
+                Invoke("CanShootAgain",shootTime);
+            }
+
+        if (Input.GetButtonDown("Fire1"))
         {
-            return;
+            Instantiate(projectilePrefab, pow.position, transform.rotation);
+            //instantiate bullet transform.lookatplayer transform.look at first 
+            Debug.Log("pew");
+            canShoot = false;
+            Invoke("CanShootAgain", shootTime);
         }
+
+        if (canShoot == false)
+            {
+                return;
+            }
         
     }
-    
+
 }

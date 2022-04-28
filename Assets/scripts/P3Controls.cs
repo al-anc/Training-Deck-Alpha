@@ -31,8 +31,10 @@ public class P3Controls : MonoBehaviour
           Debug.Log("Application End");
         }
         //Movement
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
+
+        float horizontal = Input.GetAxisRaw("MoveHorizontal");
+        float vertical = Input.GetAxisRaw("MoveVertical");
+        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
         //  player.position += front * speed; 
         //this rotates the turntable left and right
@@ -72,6 +74,16 @@ public class P3Controls : MonoBehaviour
         {
             money *= (Time.deltaTime * speed);
         }
+
+        if (Input.GetButton("Dash"))
+        {
+            money *= (Time.deltaTime * dashspeed);
+        }
+        else
+        {
+            money *= (Time.deltaTime * speed);
+        }
+
         money.y = 0;
         turntable.position += money;
     }

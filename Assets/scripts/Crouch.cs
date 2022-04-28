@@ -16,20 +16,20 @@ public class Crouch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Crouch"))
+        if (Input.GetKeyDown(KeyCode.JoystickButton8) || Input.GetKeyDown(KeyCode.C))
         {
             crouched = !crouched;
        
             if(crouched == true){
                 
                 body.localScale = new Vector3 (1,.5f,1);
-                coll.height = 1;
+                coll.height = 0.032f;
                                 }
 
             if(!crouched)
             {
                 body.localScale = new Vector3 (1,1.0f,1);
-                coll.height = 2;
+                coll.height = 0.064f;
             
             }
         }
