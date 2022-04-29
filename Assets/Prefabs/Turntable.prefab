@@ -50,6 +50,7 @@ GameObject:
   - component: {fileID: -5218431983739089756}
   - component: {fileID: -7715294331507076780}
   - component: {fileID: 950337272}
+  - component: {fileID: 219379108110799246}
   m_Layer: 0
   m_Name: Turntable
   m_TagString: Player
@@ -135,6 +136,8 @@ MonoBehaviour:
   dashspeed: 30
   isWalking: 0
   isStrafing: 0
+  coolDown: 1
+  coolDownTimer: 0
 --- !u!54 &5810811909460754173
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -357,6 +360,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &219379108110799246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5810811909460754169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0492c65924c44c542a990a9949842619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 5810811909460754169}
+  projectilePrefab: {fileID: 696663518492972672, guid: 92362d78531b6664fa89bf7bc4bc379c, type: 3}
+  canShoot: 1
+  shootTime: 5
+  eeeee: {fileID: 4755744572986078967}
 --- !u!1 &5810811910185927923
 GameObject:
   m_ObjectHideFlags: 0
