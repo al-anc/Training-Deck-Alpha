@@ -2076,9 +2076,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Use F, LMB, or Right Bumpter to fire your semi-auto pistol! Small enemies
-    like these take 2 hits to take down. You can only fire straight so sometimes
-    you'll need to jump to hit a higher target!
+  m_text: Use F, Left Mouse Button, or Right Bumper to fire your semi-auto pistol!
+    Small enemies like these take 2 hits to take down. You can only fire straight
+    so sometimes you'll need to jump to hit a higher target!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2967,7 +2967,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &776219688
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3708,9 +3708,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Watch out for spikebombs that may block your path! They deal damage if
+  m_text: Watch out for spike bombs that may block your path! They deal damage if
     you run into them! But you can shoot them to clear them from your path. This
-    one has been deactiavted for your saftey. Low on health? Pick up a health crystal
+    one has been deactivated for your safety. Low on health? Pick up a health crystal
     like the one on the left!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3879,7 +3879,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -200}
+  m_AnchoredPosition: {x: 100, y: -120}
   m_SizeDelta: {x: 200, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1115705725
@@ -4392,7 +4392,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -120}
+  m_AnchoredPosition: {x: 100, y: -200}
   m_SizeDelta: {x: 200, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1339828824
@@ -4713,8 +4713,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Use Shift or LBumper to Dash! This can allow you to clear large gaps or
-    get through deadly obstacles... becareful of the 1 second cooldown!
+  m_text: Use Left Shift or X Button to Dash! This can allow you to clear large gaps
+    or get through deadly obstacles... be careful of the 1-second cooldown!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
